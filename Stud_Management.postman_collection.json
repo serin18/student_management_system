@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "23ee098e-426f-4dc1-ac9a-8bcc8f5a5053",
+		"name": "Stud_Management",
+		"description": "This collection includes API requests related to the authentication and login of admin users.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34632326"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NTM5ODE0LCJpYXQiOjE3MTQ1MDM4MTQsImp0aSI6IjUwNGQ5Y2IwZTU2NTQ3ZDU4OWZlNTc0ODVlZmFiNjM4IiwidXNlcl9pZCI6MTF9.BGvVKQM-G7SHr7g0EneVMSRbf-2N4yaF1GLTuV-wRXM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\": \"Maria Manoj\",\r\n    \"reg_number\": \"9876\",\r\n    \"email\": \"mary@gmail.com\",\r\n    \"depart\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/stud_prof/",
+				"description": "1\\. Admin Login:  \n\\- Method: POST  \n\\- Endpoint: /admin/login/  \n\\- Description: Authenticate an admin user and generate JWT tokens for authentication.  \n\\- Headers:  \n\\- Content-Type: application/json  \n\\- Request Body (JSON):  \n{  \n\"username\": \"admin_username\",  \n\"password\": \"admin_password\"  \n}  \n\\- Expected Response Status Codes:  \n\\- 200 OK: Admin successfully logged in, and JWT tokens generated.  \n\\- 401 Unauthorized: Invalid credentials provided."
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NTQwNzYzLCJpYXQiOjE3MTQ1MDQ3NjMsImp0aSI6IjZjNzllNDUzMjE5MjQ3YTNhOWNjYjlkYTFjMzc0MjU2IiwidXNlcl9pZCI6OX0.sfcUO5yj9R80yxdNcTiZ35y_3Jo87oPND2nzJ-lskaI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"department_name\": \"BA Sanskrit\",\r\n    \"description\": \"BA Sanskrit explore the career by studying saskrit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/department/",
+				"description": "Create a new department."
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NTQxMTQ4LCJpYXQiOjE3MTQ1MDUxNDgsImp0aSI6IjU4NDlkZjRmMDk3MzQzM2JiMTY4YTNjNzJhNDY1Y2I0IiwidXNlcl9pZCI6OX0.hXXiFFHpo4vGD1wG7Pbahz4XhWbo7xTqp3MwLrtSiuo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\": \"Shali\",\r\n    \"reg_number\": \"8765\",\r\n    \"email\": \"shali@gmail.com\",\r\n    \"depart\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/stud_prof/",
+				"description": "create student API"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NTQyOTczLCJpYXQiOjE3MTQ1MDY5NzMsImp0aSI6IjQ1MjI5YTg2M2RhMjQ0MmE4N2YyYjczOGY4ZDU1MGZjIiwidXNlcl9pZCI6OX0.AB0Rhg3MnSg2KYmdWkfcfS3-8W_HUWJ1rV83tl7OM-4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"full_name\": \"Sreena CS\",\r\n    \"reg_number\": 4569,\r\n    \"phone_number\": \"1234567896\",\r\n    \"email\": \"sreena5@gmail.com\",\r\n    \"depart\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/student/4/",
+				"description": "Delete a specific student"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NTQ0MjEwLCJpYXQiOjE3MTQ1MDgyMTAsImp0aSI6ImI4ZDVlNjkwM2U4OTRjNmM4OTkyYzc4ZjQxOGMzZGM2IiwidXNlcl9pZCI6OX0.JrD_1HP4pTV6_kt_1aG8_-ObcxdwNs2NK7AvmQtKu9o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "anu",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "anu@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/student/3/",
+				"description": "view the students"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NTQ0MjEwLCJpYXQiOjE3MTQ1MDgyMTAsImp0aSI6ImI4ZDVlNjkwM2U4OTRjNmM4OTkyYzc4ZjQxOGMzZGM2IiwidXNlcl9pZCI6OX0.JrD_1HP4pTV6_kt_1aG8_-ObcxdwNs2NK7AvmQtKu9o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"full_name\": \"Anu\",\r\n    \"reg_number\": 1234,\r\n    \"phone_number\": 1122334455,\r\n    \"email\": \"anug@gmail.com\",\r\n    \"depart\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/student/3/",
+				"description": "Update the student "
+			},
+			"response": []
+		}
+	]
+}
